@@ -7,8 +7,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.BeforeTest;
+import org.testng.Assert;
 import org.testng.annotations.AfterTest;
-import org.testng.Assert; // Import TestNG's Assert class
 
 public class SpringApplicationTests {
 
@@ -16,23 +16,17 @@ public class SpringApplicationTests {
     WebDriver driver = null;
 
     @BeforeTest
-    public void beforeTest() throws Exception {
-        // Replace <seleniumhost:port> with correct values
-        String seleniumHost = "seleniumhost"; // Remove the "http://" part
-        int seleniumPort = 4444;
-        
-        // Construct the Selenium Hub URL
-        String hubUrl = String.format("http://%s:%d/wd/hub", seleniumHost, seleniumPort);
-        
-        driver = new RemoteWebDriver(new URL(hubUrl), chromeOptions);
-        
+    public void beforeTest() throws Exception
+     {
+   // replace seleniumhost and port with correct values
+        driver = new RemoteWebDriver(new URL("http://<seleniumhost:port>/"), chromeOptions);
         driver.manage().window().maximize();
     }
 
     @AfterTest
-    public void afterTest() {
+    public void afterTest() 
+    {
         driver.quit();
     }
-
 
 }
