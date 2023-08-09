@@ -3,6 +3,7 @@ package com.examly.springapp;
 import org.testng.annotations.Test;
 import java.net.URL;
 
+import org.assertj.core.api.Assert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.remote.RemoteWebDriver;
