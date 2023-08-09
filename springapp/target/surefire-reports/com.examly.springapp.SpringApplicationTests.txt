@@ -1,10 +1,14 @@
 -------------------------------------------------------------------------------
 Test set: com.examly.springapp.SpringApplicationTests
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 0.915 s <<< FAILURE! - in com.examly.springapp.SpringApplicationTests
-beforeTest(com.examly.springapp.SpringApplicationTests)  Time elapsed: 0.705 s  <<< FAILURE!
-java.net.MalformedURLException: Error at index 0 in: "port>"
-	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:22)
-Caused by: java.lang.NumberFormatException: Error at index 0 in: "port>"
-	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:22)
+Tests run: 2, Failures: 1, Errors: 0, Skipped: 1, Time elapsed: 1.817 s <<< FAILURE! - in com.examly.springapp.SpringApplicationTests
+beforeTest(com.examly.springapp.SpringApplicationTests)  Time elapsed: 1.609 s  <<< FAILURE!
+org.openqa.selenium.remote.UnreachableBrowserException: 
+Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'efbadadfdeceeafddfddddfcefafdedb-0', ip: '10.56.34.6', os.name: 'Linux', os.arch: 'amd64', os.version: '5.10.162+', java.version: '11.0.18'
+Driver info: driver.version: RemoteWebDriver
+	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:27)
+Caused by: java.net.UnknownHostException: http: Name or service not known
+	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:27)
 

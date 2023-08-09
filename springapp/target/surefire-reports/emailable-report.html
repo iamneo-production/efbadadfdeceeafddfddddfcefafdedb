@@ -9,21 +9,54 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Surefire suite</th></tr>
-<tr><td><a href="#t0">Surefire test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">93</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Surefire test</a></td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">924</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.examly.springapp.SpringApplicationTests</td><td><a href="#m0">beforeTest</a></td><td rowspan="1">1691556195885</td><td rowspan="1">62</td></tr><tr><th colspan="4">Surefire test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.examly.springapp.SpringApplicationTests</td><td><a href="#m1">afterTest</a></td><td rowspan="1">1691556195962</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Surefire suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Surefire test &#8212; failed (configuration methods)</th></tr><tr class="failedeven"><td rowspan="1">com.examly.springapp.SpringApplicationTests</td><td><a href="#m0">beforeTest</a></td><td rowspan="1">1691556786369</td><td rowspan="1">875</td></tr><tr><th colspan="4">Surefire test &#8212; skipped (configuration methods)</th></tr><tr class="skippedeven"><td rowspan="1">com.examly.springapp.SpringApplicationTests</td><td><a href="#m1">afterTest</a></td><td rowspan="1">1691556787263</td><td rowspan="1">0</td></tr></tbody>
 </table>
-<h2>Surefire test</h2><h3 id="m0">com.examly.springapp.SpringApplicationTests#beforeTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.net.MalformedURLException: Error at index 0 in: &quot;port&gt;&quot;
-	at java.base/java.net.URL.&lt;init&gt;(URL.java:679)
-	at java.base/java.net.URL.&lt;init&gt;(URL.java:541)
-	at java.base/java.net.URL.&lt;init&gt;(URL.java:488)
-	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:22)
-Caused by: java.lang.NumberFormatException: Error at index 0 in: &quot;port&gt;&quot;
-	at java.base/java.lang.NumberFormatException.forCharSequence(NumberFormatException.java:81)
-	at java.base/java.lang.Integer.parseInt(Integer.java:735)
-	at java.base/java.net.URLStreamHandler.parseURL(URLStreamHandler.java:223)
-	at java.base/java.net.URL.&lt;init&gt;(URL.java:674)
-	... 32 more
+<h2>Surefire test</h2><h3 id="m0">com.examly.springapp.SpringApplicationTests#beforeTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.remote.UnreachableBrowserException: Could not start a new session. Possible causes are invalid address of the remote server or browser start-up failure.
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;efbadadfdeceeafddfddddfcefafdedb-0&apos;, ip: &apos;10.56.34.6&apos;, os.name: &apos;Linux&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;5.10.162+&apos;, java.version: &apos;11.0.18&apos;
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:573)
+	at org.openqa.selenium.remote.RemoteWebDriver.startSession(RemoteWebDriver.java:213)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:131)
+	at org.openqa.selenium.remote.RemoteWebDriver.&lt;init&gt;(RemoteWebDriver.java:144)
+	at com.examly.springapp.SpringApplicationTests.beforeTest(SpringApplicationTests.java:27)
+Caused by: java.net.UnknownHostException: http: Name or service not known
+	at java.base/java.net.Inet4AddressImpl.lookupAllHostAddr(Native Method)
+	at java.base/java.net.InetAddress$PlatformNameService.lookupAllHostAddr(InetAddress.java:929)
+	at java.base/java.net.InetAddress.getAddressesFromNameService(InetAddress.java:1534)
+	at java.base/java.net.InetAddress$NameServiceAddresses.get(InetAddress.java:848)
+	at java.base/java.net.InetAddress.getAllByName0(InetAddress.java:1524)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1382)
+	at java.base/java.net.InetAddress.getAllByName(InetAddress.java:1306)
+	at okhttp3.Dns.lambda$static$0(Dns.java:39)
+	at okhttp3.internal.connection.RouteSelector.resetNextInetSocketAddress(RouteSelector.java:171)
+	at okhttp3.internal.connection.RouteSelector.nextProxy(RouteSelector.java:135)
+	at okhttp3.internal.connection.RouteSelector.next(RouteSelector.java:84)
+	at okhttp3.internal.connection.ExchangeFinder.findConnection(ExchangeFinder.java:187)
+	at okhttp3.internal.connection.ExchangeFinder.findHealthyConnection(ExchangeFinder.java:108)
+	at okhttp3.internal.connection.ExchangeFinder.find(ExchangeFinder.java:88)
+	at okhttp3.internal.connection.Transmitter.newExchange(Transmitter.java:169)
+	at okhttp3.internal.connection.ConnectInterceptor.intercept(ConnectInterceptor.java:41)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.cache.CacheInterceptor.intercept(CacheInterceptor.java:94)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.internal.http.BridgeInterceptor.intercept(BridgeInterceptor.java:93)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RetryAndFollowUpInterceptor.intercept(RetryAndFollowUpInterceptor.java:88)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:142)
+	at okhttp3.internal.http.RealInterceptorChain.proceed(RealInterceptorChain.java:117)
+	at okhttp3.RealCall.getResponseWithInterceptorChain(RealCall.java:229)
+	at okhttp3.RealCall.execute(RealCall.java:81)
+	at org.openqa.selenium.remote.internal.OkHttpClient.execute(OkHttpClient.java:103)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:105)
+	at org.openqa.selenium.remote.ProtocolHandshake.createSession(ProtocolHandshake.java:74)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:136)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	... 33 more
 ... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">com.examly.springapp.SpringApplicationTests#afterTest</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
