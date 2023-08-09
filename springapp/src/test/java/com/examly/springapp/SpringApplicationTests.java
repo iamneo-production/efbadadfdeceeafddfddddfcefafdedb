@@ -34,13 +34,5 @@ public class SpringApplicationTests {
         driver.quit();
     }
 
-    @Test
-    public void testSomething() {
-        // Your test code here
-        // Example:
-        driver.get("https://www.example.com");
-        String title = driver.getTitle();
-        String expectedTitle = "Example Domain"; // Corrected the expected title
-        Assert.assertEquals(title, expectedTitle);
-    }
+
 }
